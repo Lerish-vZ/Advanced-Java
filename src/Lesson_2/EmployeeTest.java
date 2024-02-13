@@ -1,2 +1,4 @@
-package Lesson_2;public class EmployeeTest {
+package Lesson_2;
+
+public class EmployeeTest {
 }

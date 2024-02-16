@@ -33,4 +33,12 @@ public class Employee {
     public void setEmpSalary(double empSalary) {
         this.empSalary = empSalary;
     }
+
+    public String getEmpName() {
+        return empName;
+    }
+
+    public void setEmpName(String empName) {
+        this.empName = empName;
+    }
 }

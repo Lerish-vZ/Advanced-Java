@@ -10,7 +10,7 @@ public class EmployeeTest {
        emp1.setSSN("012-34-5678");
        emp1.setEmpSalary(120_345.27);
 
-       Sytem.out.println("EMPLOYEE INFO \n" +
+       System.out.println("EMPLOYEE INFO \n" +
                        "ID: " + emp1.getEmpId() + "\n" +
                        "Name: " + emp1.getEmpName() + "\n" +
                        "Social Security Number: " + emp1.getSSN() + "\n" +

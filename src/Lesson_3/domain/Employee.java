@@ -2,10 +2,10 @@ package Lesson_3.domain;
 
 public class Employee {
 
-    public int empId;
-    public String empName;
-    public String SSN;
-    public double empSalary;
+    private int empId;
+    private String empName;
+    private String SSN;
+    private double empSalary;
 
     public Employee() {
 
@@ -14,31 +14,26 @@ public class Employee {
         return empId;
     }
 
-    public void setEmpId(int empId) {
-        this.empId = empId;
-    }
-
     public String getSSN() {
         return SSN;
-    }
-
-    public void setSSN(String SSN) {
-        this.SSN = SSN;
     }
 
     public double getEmpSalary() {
         return empSalary;
     }
 
-    public void setEmpSalary(double empSalary) {
-        this.empSalary = empSalary;
+    public void rasieSalary(double increase) { //increases salary
+        this.empSalary += increase;
     }
 
     public String getEmpName() {
         return empName;
     }
 
-    public void setEmpName(String empName) {
-        this.empName = empName;
+    public void changeName(String newName) { //changes name
+        if (newName != null){
+            this.empName = newName;
+        }
     }
+
 }

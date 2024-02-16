@@ -1,4 +1,4 @@
-package Lesson_2.domain;
+package Lesson_3.domain;
 
 public class Employee {
 

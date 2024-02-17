@@ -29,6 +29,10 @@ public class Employee {
         this.empSalary += increase;
     }
 
+    public void setEmpName(String empName) {
+        this.empName = empName;
+    }
+
     public String getEmpName() {
         return empName;
     }
@@ -37,6 +41,11 @@ public class Employee {
         if (newName != null){
             this.empName = newName;
         }
+    }
+
+    public void printEmployee() {
+        System.out.println();
+        System.out.println("Employee ID: ");
     }
 
     //The ID, salary and ssn fields are now immutable (no changes are allowed).

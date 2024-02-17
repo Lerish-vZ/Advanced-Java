@@ -1,5 +1,7 @@
 package Lesson_3.domain;
 
+import java.text.NumberFormat;
+
 public class Employee {
 
     private int empId;
@@ -45,7 +47,10 @@ public class Employee {
 
     public void printEmployee() {
         System.out.println();
-        System.out.println("Employee ID: ");
+        System.out.println("Employee ID: \t" + getEmpId());
+        System.out.println("Employee Name: \t" + getEmpName());
+        System.out.println("Employee Soc Sec #: \t" + getSSN());
+        System.out.println("Employee Salary: \t" + NumberFormat.getCurrencyInstance().format((double) getEmpSalary()));
     }
 
     //The ID, salary and ssn fields are now immutable (no changes are allowed).

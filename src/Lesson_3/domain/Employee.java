@@ -7,8 +7,11 @@ public class Employee {
     private String SSN;
     private double empSalary;
 
-    public Employee() {
-
+    public Employee(int empId, String empName, String SSN, double empSalary) { //
+        this.empId = empId;
+        this.empName = empName;
+        this.SSN = SSN;
+        this.empSalary =empSalary;
     }
     public int getEmpId() {
         return empId;

@@ -41,3 +41,9 @@ public class Employee {
 
     //The ID, salary and ssn fields are now immutable (no changes are allowed).
 }
+
+//The benefits of using encapsulation are as follows:
+    /* Protects an object from unwanted access bt clients
+        Prevents assigning undesired values for its variables by the clients, which can make the state of an object unstable
+        Allows changing the class implementation without modifying the client interface
+     */

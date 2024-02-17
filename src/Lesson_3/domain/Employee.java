@@ -7,12 +7,12 @@ public class Employee {
     private String SSN;
     private double empSalary;
 
-    public Employee(int empId, String empName, String SSN, double empSalary) { //
+    public Employee(int empId, String empName, String SSN, double empSalary) { //makes class as immutable as possible
         this.empId = empId;
         this.empName = empName;
         this.SSN = SSN;
         this.empSalary =empSalary;
-    }
+    } //makes sure that Employee instance is fully populated with data before it is a valid employee object
     public int getEmpId() {
         return empId;
     }

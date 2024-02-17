@@ -36,4 +36,5 @@ public class Employee {
         }
     }
 
+    //The ID, salary and ssn fields are now immutable (no changes are allowed).
 }

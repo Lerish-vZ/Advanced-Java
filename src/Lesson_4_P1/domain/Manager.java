@@ -1,4 +1,4 @@
-package com.example.domain;
+package Lesson_4_P1.domain;
 
 public class Manager extends Employee {
     private String deptName;

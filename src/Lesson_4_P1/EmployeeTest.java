@@ -1,11 +1,11 @@
-package com.example;
+package Lesson_4_P1;
 
 
-import com.example.domain.Admin;
-import com.example.domain.Director;
-import com.example.domain.Employee;
-import com.example.domain.Engineer;
-import com.example.domain.Manager;
+import Lesson_4_P1.domain.Admin;
+import Lesson_4_P1.domain.Director;
+import Lesson_4_P1.domain.Employee;
+import Lesson_4_P1.domain.Engineer;
+import Lesson_4_P1.domain.Manager;
 
 public class EmployeeTest {
 

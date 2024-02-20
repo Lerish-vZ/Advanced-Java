@@ -1,4 +1,4 @@
-package com.example.domain;
+package Lesson_4_P1.domain;
 
 public class Director extends Manager {
 

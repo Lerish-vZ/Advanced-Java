@@ -42,7 +42,7 @@ public class EmployeeTest {
 
     public static void printEmployee(Employee emp, EmployeeStockPlan esp){
         printEmployee (emp);
-        System.out.println("Stock Options:   " + esp.grantStock(emp));
+        System.out.println("Stock Options:   " + esp.grantStock(emp) + "\n") ;
     }
 
 }

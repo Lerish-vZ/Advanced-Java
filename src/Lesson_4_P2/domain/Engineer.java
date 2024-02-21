@@ -1,4 +1,4 @@
-package com.example.domain;
+package Lesson_4_P2.domain;
 
 public class Engineer extends Employee {
    

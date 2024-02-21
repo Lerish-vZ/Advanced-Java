@@ -1,7 +1,7 @@
-package com.example;
+package Lesson_4_P2;
 
-import com.example.domain.Employee;
-import com.example.domain.Engineer;
+import Lesson_4_P2.domain.Employee;
+import Lesson_4_P2.domain.Engineer;
 
 import java.text.NumberFormat;
 

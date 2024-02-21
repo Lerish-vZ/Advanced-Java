@@ -13,6 +13,6 @@ public class Manager extends Employee {
     }
 
     public String toString() {
-        return super.toString() + "\nDepartment: \t" + getDeptName();
+        return super.toString() + "\nDepartment: \t" + getDeptName(); //super calls the parent class (you can access all the methods and public variables in parent class by using super.
     }
 }

@@ -21,17 +21,18 @@ public class EmployeeTest {
 
         Director dir = new Director(12, "Susan Wheeler", "099-45-2340", 120_567.36, "Global Marketing", 1_000_000.00);
 
-        
-        eng.printEmployee();
+        EmployeeStockPlan esp = new EmployeeStockPlan();
 
-        adm.printEmployee();
-        mgr.printEmployee();
-        dir.printEmployee();
+        printEmployee(eng, esp);
+
+        printEmployee(adm, esp);
+        printEmployee(mgr, esp);
+        printEmployee(dir, esp);
 
         System.out.println("\nTesting raiseSalary and setName on Manager:");
         mgr.setName("Barbara Johnson-Smythe");
         mgr.raiseSalary(10_000.00);
-        mgr.printEmployee();
+        printEmployee(mgr, esp);
     }
 
     public static void printEmployee(Employee emp){

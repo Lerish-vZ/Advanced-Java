@@ -1,4 +1,4 @@
-package com.example;
+package Lesson_4_P3.domain;
 
 public final class PeerSingleton {
 
@@ -13,9 +13,14 @@ public final class PeerSingleton {
         hostNames[4] = "192.168.2.14";
     }
 
-    public PeerSingleton() {
+    private PeerSingleton() {
     }
 
+    private static final PeerSingleton instance = new PeerSingleton();
+
+    public static PeerSingleton getInstance() {
+        return instance;
+    }
     public String[] getHostNames() {
         return hostNames;
     }

@@ -1,6 +1,7 @@
 package Lesson_4_P1;
 
 
+import Lesson_4_P1.business.EmployeeStockPlan;
 import Lesson_4_P1.domain.Admin;
 import Lesson_4_P1.domain.Director;
 import Lesson_4_P1.domain.Employee;
@@ -20,6 +21,7 @@ public class EmployeeTest {
 
         Director dir = new Director(12, "Susan Wheeler", "099-45-2340", 120_567.36, "Global Marketing", 1_000_000.00);
 
+        
         eng.printEmployee();
 
         adm.printEmployee();
@@ -32,6 +34,12 @@ public class EmployeeTest {
         mgr.printEmployee();
     }
 
-    
+    public static void printEmployee(Employee emp){
+        System.out.println(emp);
+    }
+
+    public static void printEmployee(Employee emp, EmployeeStockPlan esp){
+
+    }
 
 }

@@ -36,11 +36,13 @@ public class EmployeeTest {
     }
 
     public static void printEmployee(Employee emp){
+        System.out.println("Employee type: " + emp.getClass().getSimpleName());
         System.out.println(emp);
     }
 
     public static void printEmployee(Employee emp, EmployeeStockPlan esp){
-
+        printEmployee (emp);
+        System.out.println("Stock Options:   " + esp.grantStock(emp));
     }
 
 }

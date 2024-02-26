@@ -1,7 +1,5 @@
 package Lesson_5_P1.com;
 
-import java.lang.annotation.Documented;
-
 public class CheckingAccount extends Account { //subclass of Account
     private final double overDraftLimit;
 

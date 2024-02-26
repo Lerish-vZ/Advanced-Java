@@ -25,7 +25,15 @@ public class AbstractBankingMain {
         customer.addAccount(sack);
         sack.deposit(500);
 
-       
+        bank.addCustomer("Jane", "Simms");
+        customer = bank.getCustomer(2);
+        customer.addAccount(new CheckingAccount(200.00, 400.00));
+
+        bank.addCustomer("Owen", "Bryant");
+        customer = bank.getCustomer(3);
+        customer.addAccount(new CheckingAccount(200.00));
+
+        
         }
 
     }

@@ -1,4 +1,4 @@
-package com.example;
+package lesson_5_p3.com;
 
 public class Bank {
 

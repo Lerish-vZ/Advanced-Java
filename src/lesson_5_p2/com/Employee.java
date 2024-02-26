@@ -1,4 +1,4 @@
-package lesson_5_p2;
+package lesson_5_p2.com;
 
 public class Employee {
 
@@ -42,9 +42,9 @@ public class Employee {
         private final double bonusRate = 0.02;
         private final double withholdingRate = 0.07;
 
-        protected double calcBonus(double salary) { return salary * bonusRate};
+        protected double calcBonus(double salary) { return salary * bonusRate;}
 
-        protected double calcWithholding(double salary) {return salary * withholdingRate};
+        protected double calcWithholding(double salary) {return salary * withholdingRate;}
     }
 }
 

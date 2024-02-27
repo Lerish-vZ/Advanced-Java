@@ -1,2 +1,4 @@
-package lesson_6_p1.com;public class Cat {
+package lesson_6_p1.com;
+
+public class Cat {
 }

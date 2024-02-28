@@ -6,8 +6,9 @@ import java.util.TreeMap;
 
 public class ProductCounter {
     // Create a Counting Map
+    private Map <String, Long> productCountMap = new HashMap<>();
     // Create a Name Mapping Map
-
+    private Map <String, String> productNames = new TreeMap<>();
     public static void main(String[] args) {
 
         // List of part data
@@ -21,17 +22,36 @@ public class ProductCounter {
         productNames.put("Duke Mug   ", "1M02");
 
         // Create Product Counter Object and process data
+        ProductCounter pc1 = new ProductCounter(productNames);
+        pc1.processList(parts);
+        pc1.printReport();
     }
 
     public ProductCounter(Map productNames) {
         // Your code here
+        this.productNames = productNames;
     }
 
     public void processList(String[] list) {
         // your code here
+        long curVal = 0;
+        for(String itemNumber: list) {
+            if (productCountMap.containsKey((itemNumber))) {
+                curVal = productCountMap.get(itemNumber);
+                curVal++;
+                productCountMap.put(itemNumber, new Long(curVal));
+            } else {
+                productCountMap.put(itemNumber, new Long(1));
+            }
+        }
     }
 
     public void printReport() {
         // Your code here
+        System.out.println("=== Product Raport ===");
+        for(String key: productNames.keySet()) {
+            System.out.println("Name: " + key);
+            System.out.println("\t\tCount: " + productCountMap.get(productNames.get(key)));
+        }
     }
 }

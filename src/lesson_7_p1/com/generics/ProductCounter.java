@@ -1,4 +1,4 @@
-package com.example.generics;
+package lesson_7_p1.com.generics;
 
 import java.util.HashMap;
 import java.util.Map;

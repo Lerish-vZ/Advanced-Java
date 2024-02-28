@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.example;
+package lesson_6_p2.com;
 
 
 public enum Branch {

@@ -1,6 +1,6 @@
 
 
-package com.example;
+package lesson_6_p2.com;
 
 
 public class SavingsAccount extends Account{

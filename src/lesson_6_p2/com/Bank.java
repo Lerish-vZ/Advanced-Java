@@ -1,6 +1,6 @@
 package lesson_6_p2.com;
 
-public class Bank {
+public class Bank implements BankOperations {
 
     private Customer[] customers;
     private int numberOfCustomers;

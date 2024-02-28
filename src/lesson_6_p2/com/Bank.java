@@ -1,6 +1,6 @@
 package lesson_6_p2.com;
 
-public class Bank implements BankOperations {
+public class Bank implements BankOperations{
 
     private Customer[] customers;
     private int numberOfCustomers;
@@ -19,4 +19,7 @@ public class Bank implements BankOperations {
         return numberOfCustomers;
     }
 
+    public Customer getCustomer(int customerIndex) {
+        return customers[customerIndex];
+    }
 }

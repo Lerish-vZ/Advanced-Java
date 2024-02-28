@@ -36,7 +36,7 @@ public interface BankOperations {
 
             // For each account for this customer...
             for (int acctIndex = 0; acctIndex< customer.getNumOfAccounts(); acctIndex++) {
-                Account account = customer.getAccount(acctIndex);
+                AccountOperations account = customer.getAccount(acctIndex);
 
                 // Print the current balance of the account
                 System.out.println("    " + account);

@@ -1,4 +1,4 @@
-package com.example;
+package lesson_7_p2.com;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

@@ -1,7 +1,7 @@
 package lesson_6_p2.com;
 
 
-public class CheckingAccount extends Account {
+public class CheckingAccount extends Account implements AccountOperations {
     
     private final double overDraftLimit;
     

@@ -34,9 +34,19 @@ public class PetMain {
         a = new Fish();
         a.eat();
         a.walk();
+
+        playWithAnimal(s);
+        playWithAnimal(c);
+        playWithAnimal(f);
     }
     
     public static void playWithAnimal(Animal a) {
         // completed in practice
+        if (a instanceof Pet){
+            Pet p = (Pet) a; //cast it to a Pet if it is an instance of Pet
+            p.play();
+        } else {
+            System.out.println("Danger! Wild Animal");
+        }
     }
 }

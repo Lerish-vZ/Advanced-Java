@@ -19,7 +19,4 @@ public class Bank implements BankOperations {
         return numberOfCustomers;
     }
 
-    public Customer getCustomer(int customerIndex) {
-        return customers[customerIndex];
-    }
 }

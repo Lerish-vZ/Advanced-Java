@@ -10,7 +10,7 @@ public abstract class Account {
     
     @Override
     public String toString() {
-        return getDescription() + ": current balance is " + balance;
+        return "Current balance is " + balance;
     }
     
 }

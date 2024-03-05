@@ -1,4 +1,4 @@
-package com.example.lambda;
+package lesson_8_p2.com.lambda;
 
 /**
  *

@@ -32,7 +32,11 @@ public class RoboMailTest01 {
             .forEach(p -> robo.roboText(p)); // Convert to stream and forEach
     
     System.out.println("\n=== All Sales ===");
-    robo.mail(pl, salesEmployeesOver50); // Convert to stream and forEach
-    robo.text(pl, salesEmployeesOver50); // Convert to stream and forEach   
+    pl.stream()
+            .filter(salesEmployeesOver50)
+            .forEach(p -> robo.roboMail(p)); // Convert to stream and forEach
+    pl.stream()
+            .filter(salesEmployeesOver50)
+            .forEach(p -> robo.roboText(p)); // Convert to stream and forEach
   }
 }

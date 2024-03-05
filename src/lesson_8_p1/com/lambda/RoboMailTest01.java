@@ -23,8 +23,13 @@ public class RoboMailTest01 {
     
     System.out.println("\n==== RoboMail 01");
     System.out.println("\n=== Sales Execs ===");
-    robo.mail(pl, salesExecutives); // Convert to stream and forEach
-    robo.text(pl, salesExecutives); // Convert to stream and forEach
+    pl.stream()
+            .filter(salesExecutives)
+            .forEach(p -> robo.roboMail(p));// Convert to stream and forEach
+
+    pl.stream()
+            .filter(salesExecutives)
+            .forEach(p -> robo.roboText(p)); // Convert to stream and forEach
     
     System.out.println("\n=== All Sales ===");
     robo.mail(pl, salesEmployeesOver50); // Convert to stream and forEach

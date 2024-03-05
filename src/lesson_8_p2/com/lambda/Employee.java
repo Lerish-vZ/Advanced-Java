@@ -1,4 +1,4 @@
-package com.example.lambda;
+package com.example.lambda; //lesson_8_p1.com.lambda
 
 import java.util.ArrayList;
 import java.util.List;

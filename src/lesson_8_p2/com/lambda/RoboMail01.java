@@ -22,6 +22,4 @@ public class RoboMail01 {
       + " " + p.getSurName() + " age " + p.getAge()
       + " at " + p.getPhone());
   }
-
-  
 }

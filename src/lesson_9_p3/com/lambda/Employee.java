@@ -1,4 +1,7 @@
-package com.example.lambda;
+package lesson_9_p3.com.lambda;
+
+import com.example.lambda.Gender;
+import com.example.lambda.Role;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -42,72 +45,72 @@ public class Employee {
     private String code = "";
 
        
-    public Employee.Builder givenName(String givenName){
+    public Builder givenName(String givenName){
       this.givenName = givenName;
       return this;
     }
     
-    public Employee.Builder surName(String surName){
+    public Builder surName(String surName){
       this.surName = surName;
       return this;
     }
     
-    public Employee.Builder age (int val){
+    public Builder age (int val){
       age = val;
       return this;
     }
     
-    public Employee.Builder gender(Gender val){
+    public Builder gender(Gender val){
       gender = val;
       return this;
     }
 
-    public Employee.Builder role(Role val){
+    public Builder role(Role val){
       role = val;
       return this;
     }
     
-    public Employee.Builder dept(String val){
+    public Builder dept(String val){
       dept = val;
       return this;
     }
     
-    public Employee.Builder startDate(LocalDate val){
+    public Builder startDate(LocalDate val){
         startDate =  val;
         return this;
     }
     
-    public Employee.Builder salary(double val){
+    public Builder salary(double val){
         salary = val;
         return this;
     }
         
-    public Employee.Builder email(String val){
+    public Builder email(String val){
       eMail = val;
       return this;
     }
     
-    public Employee.Builder phoneNumber(String val){
+    public Builder phoneNumber(String val){
       phone = val;
       return this;
     }
     
-    public Employee.Builder address(String val){
+    public Builder address(String val){
       address = val;
       return this;
     }
 
-    public Employee.Builder city(String val){
+    public Builder city(String val){
       city = val;
       return this;
     }
 
-    public Employee.Builder state(String val){
+    public Builder state(String val){
       state = val;
       return this;
     }
 
-    public Employee.Builder code(String val){
+    public Builder code(String val){
       code = val;
       return this;
     }
@@ -121,7 +124,7 @@ public class Employee {
     super();
   }
     
-  private Employee(Employee.Builder builder){
+  private Employee(Builder builder){
     givenName = builder.givenName;
     surName = builder.surName;
     age = builder.age;
@@ -254,7 +257,7 @@ public class Employee {
     List<Employee> people = new ArrayList<>();
     
     people.add(
-      new Employee.Builder()
+      new Builder()
             .givenName("Bob")
             .surName("Baker")
             .age(23)
@@ -273,7 +276,7 @@ public class Employee {
       );
     
     people.add(
-      new Employee.Builder()
+      new Builder()
             .givenName("Jane")
             .surName("Doe")
             .age(25)
@@ -292,7 +295,7 @@ public class Employee {
       );
     
     people.add(
-      new Employee.Builder()
+      new Builder()
             .givenName("John")
             .surName("Doe")
             .age(28)
@@ -311,7 +314,7 @@ public class Employee {
     );
     
     people.add(
-      new Employee.Builder()
+      new Builder()
             .givenName("James")
             .surName("Johnson")
             .age(45)
@@ -330,7 +333,7 @@ public class Employee {
     );
 
     people.add(
-      new Employee.Builder()
+      new Builder()
             .givenName("John")
             .surName("Adams")
             .age(52)
@@ -349,7 +352,7 @@ public class Employee {
     );
     
     people.add(
-      new Employee.Builder()
+      new Builder()
             .givenName("Joe")
             .surName("Bailey")
             .age(62)
@@ -368,7 +371,7 @@ public class Employee {
     );
     
     people.add(
-      new Employee.Builder()
+      new Builder()
             .givenName("Phil")
             .surName("Smith")
             .age(55)
@@ -387,7 +390,7 @@ public class Employee {
     );
     
     people.add(
-      new Employee.Builder()
+      new Builder()
             .givenName("Betty")
             .surName("Jones")
             .age(65)

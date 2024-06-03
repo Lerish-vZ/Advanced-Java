@@ -1,7 +1,7 @@
 package lesson_9_p1.com.lambda;
 
-import com.example.lambda.Gender;
-import com.example.lambda.Role;
+import com;
+import com.lambda.Role;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

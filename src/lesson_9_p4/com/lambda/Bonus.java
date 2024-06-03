@@ -1,5 +1,7 @@
 
-package com.example.lambda;
+package lesson_9_p4.com.lambda;
+
+import com.example.lambda.Role;
 
 /**
  *

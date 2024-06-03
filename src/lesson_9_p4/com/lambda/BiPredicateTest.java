@@ -1,4 +1,6 @@
-package com.example.lambda;
+package lesson_9_p4.com.lambda;
+
+import com.example.lambda.Employee;
 
 import java.time.LocalDate;
 import java.util.List;

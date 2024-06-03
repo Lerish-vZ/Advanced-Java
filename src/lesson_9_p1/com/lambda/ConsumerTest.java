@@ -24,8 +24,6 @@ public class ConsumerTest {
     
     System.out.println("=== First Salary");
     // Call your consumer here
-
-
-    
+    eCons.accept(first);
   }
 }

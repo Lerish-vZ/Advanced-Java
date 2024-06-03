@@ -1,6 +1,6 @@
 package lesson_9_p3.com.lambda;
 
-import com.example.lambda.SupplierTest;
+import lesson_9_p3.com.lambda.SupplierTest;
 
 /**
  *

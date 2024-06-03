@@ -19,8 +19,8 @@ public class FunctionTest {
       
     System.out.println("=== First Employee Bonus");
     first.printSummary();
-    System.out.println("Bonus: " ); // Print the result here
-    eFunc.applyAsDouble(first);
+    System.out.println("Bonus: " + eFunc.applyAsDouble(first)); // Print the result here
+
         
   }
 }

@@ -48,7 +48,7 @@ public class ProductCounter {
 
     public void printReport() {
         // Your code here
-        System.out.println("=== Product Raport ===");
+        System.out.println("=== Product Report ===");
         for(String key: productNames.keySet()) {
             System.out.println("Name: " + key);
             System.out.println("\t\tCount: " + productCountMap.get(productNames.get(key)));

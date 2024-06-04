@@ -20,9 +20,10 @@ public class JoinTest {
         // Print out a sorted list of unique buyer names
         System.out.println("=== Sorted Buyer's List ===");
         String result = tList.stream() //Replace with your stream
-                .map(t -> t.getSummaryStr())
+                .map(t -> t.getBuyerName())
                         .distinct()
-                                .sorted(Comparator.comparing())
+                                .sorted()
+                                        .collect(Collectors.joining(", "));
         
         System.out.println("Buyer list: " + result);
             

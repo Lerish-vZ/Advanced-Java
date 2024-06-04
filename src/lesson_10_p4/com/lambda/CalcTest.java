@@ -18,7 +18,10 @@ public class CalcTest {
         // Print out Transaction Totals
         System.out.println("=== Transactions Totals ===");
         // Replace with stream
-        double t1 = 0;
+        double t1 = tList.stream()
+                        .filter(t -> t.getBuyerName().equals("Radio Hut"))
+                                .mapToDouble(t -> t.getTransactionTotal())
+
         
         System.out.printf("Radio Hut Total: $%,9.2f%n", t1);
         

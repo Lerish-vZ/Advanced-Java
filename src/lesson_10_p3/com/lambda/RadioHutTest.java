@@ -40,7 +40,7 @@ public class RadioHutTest {
             Optional<SalesTxn> tLarge = tList.stream()
                     .filter(t -> t.getBuyerName().equals("Radio Hut"))
                             .max(Comparator.comparing(SalesTxn::getTransactionTotal));
-            
+
             if(tLarge.isPresent()){ radioReport.accept(tLarge.get());}
         
         

@@ -36,7 +36,9 @@ public class SortTest {
         tList.stream()
                 .filter(t -> t.getBuyerName().equals("PticeCo"))
                 .sorted(Comparator
-                        .comparing(SalesTxn::getSalesPerson))
+                        .comparing(SalesTxn::getBuyerName)
+                        .thenComparing(SalesTxn::getSalesPerson)
+                        .thenComparing(SalesTxn::getTransactionTotal))
                 .forEach(transReport);
         
     }

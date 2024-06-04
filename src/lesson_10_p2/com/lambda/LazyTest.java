@@ -45,6 +45,7 @@ public class LazyTest {
                 .filter(t -> t.getState().equals(State.CO))
                 .peek(stateSearch)
                 .filter(t -> t.getProduct().equals("Widget Pro"))
+                .peek(productSearch)
                 .forEach(quantReport);
             
         

@@ -34,7 +34,6 @@ public class SortTest {
         // Sort by Buyer, SalesPerson, Transaction Total
         System.out.println("\n=== Triple Sort Transactions ===");
         tList.stream()
-                .filter(t -> t.getBuyerName().equals("PriceCo"))
                 .sorted(Comparator
                         .comparing(SalesTxn::getBuyerName)
                         .thenComparing(SalesTxn::getSalesPerson)

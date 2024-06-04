@@ -35,7 +35,7 @@ public class CalcTest {
         System.out.printf("PriceCo Total: $%,9.2f%n", t2);
         // Replace with stream
         double t3 = tList.stream()
-                .filter(t -> t.getBuyerName().equals("Radio Hut"))
+                .filter(t -> t.getBuyerName().equals("Best Deals"))
                 .mapToDouble(t -> t.getTransactionTotal())
                 .sum();;
         

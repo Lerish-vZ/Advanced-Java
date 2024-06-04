@@ -1,4 +1,6 @@
-package com.example.lambda;
+package lesson_10_p8.com.lambda;
+
+import com.example.lambda.SalesTxn;
 
 import java.util.HashMap;
 import java.util.List;

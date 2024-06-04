@@ -1,4 +1,6 @@
-package com.example.lambda;
+package lesson_10_p4.com.lambda;
+
+import com.example.lambda.SalesTxn;
 
 import java.util.List;
 import java.util.OptionalDouble;

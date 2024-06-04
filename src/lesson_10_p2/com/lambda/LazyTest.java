@@ -51,7 +51,13 @@ public class LazyTest {
         
         // Update code to handle return value of a findFirst
         System.out.println("\n=== Widget Pro Quantity in CO (FindFirst)===");
-
+        tList.stream()
+                .peek(streamStart)
+                .filter(t -> t.getState().equals(State.CO))
+                .peek(stateSearch)
+                .filter(t -> t.getProduct().equals("Widget Pro"))
+                .peek(productSearch)
+                .forEach(quantReport);
         
         
         

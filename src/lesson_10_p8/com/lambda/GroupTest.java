@@ -1,6 +1,6 @@
 package lesson_10_p8.com.lambda;
 
-import com.example.lambda.SalesTxn;
+import lesson_10_p8.com.lambda.SalesTxn;
 
 import java.util.HashMap;
 import java.util.List;

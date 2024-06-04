@@ -1,7 +1,7 @@
 package lesson_10_p1.com.lambda;
 
-import com.example.lambda.MapTest;
-import com.example.lambda.PeekTest;
+import lesson_10_p1.com.lambda.MapTest;
+import lesson_10_p1.com.lambda.PeekTest;
 
 /**
  *

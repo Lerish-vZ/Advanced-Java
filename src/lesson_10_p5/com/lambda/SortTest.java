@@ -20,7 +20,10 @@ public class SortTest {
         
         // Print out PriceCo Transactions
         System.out.println("=== PriceCo Transactions ===");
-        
+        tList.stream()
+                        .filter(t -> t.getBuyerName().equals("PticeCo"))
+                                .sorted(Comparator.comparing(SalesTxn::getSalesPerson))
+                                        .forEach(transReport);
         
         System.out.println("\n=== PriceCo Transactions Reversed ===");
                  

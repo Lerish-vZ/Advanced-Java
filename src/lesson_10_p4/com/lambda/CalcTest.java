@@ -44,15 +44,20 @@ public class CalcTest {
         // Print out Average Unit Count
         System.out.println("=== Average Unit Count ===");
         // Replace with Stream
-        OptionalDouble
-        OptionalDouble a1 = OptionalDouble.of(0);
+        OptionalDouble a1 = tList.stream()
+                .filter(t -> t.getProduct().equals("Widget Pro"))
+                .mapToDouble(t -> t.getUnitCount())
+                .average();
         
         if (a1.isPresent()){
             System.out.printf("Widget Pro Avg: %,9.0f%n", a1.getAsDouble());
         }
         
         // Replace with stream
-        OptionalDouble a2 = OptionalDouble.of(0);
+        OptionalDouble a2 = tList.stream()
+                .filter(t -> t.getProduct().equals("Widget"))
+                .mapToDouble(t -> t.getUnitCount())
+                .average();
         
         if (a2.isPresent()){
             System.out.printf("Widget Avg: %,9.0f%n", a2.getAsDouble());        

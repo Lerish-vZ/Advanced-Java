@@ -40,7 +40,12 @@ public class LazyTest {
         
         // Print out all the steps in the list
         System.out.println("\n=== Widget Pro Quantity in CO ===");
-
+        tList.stream()
+                .peek(streamStart)
+                .filter(t -> t.getState().equals(State.CO))
+                .peek(stateSearch)
+                .filter(t -> t.getProduct().equals("Widget Pro"))
+                .forEach(quantReport);
             
         
         // Update code to handle return value of a findFirst

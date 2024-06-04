@@ -26,7 +26,10 @@ public class SortTest {
                                         .forEach(transReport);
         
         System.out.println("\n=== PriceCo Transactions Reversed ===");
-                 
+        tList.stream()
+                .filter(t -> t.getBuyerName().equals("PticeCo"))
+                .sorted(Comparator.comparing(SalesTxn::getSalesPerson).reversed())
+                .forEach(transReport);
         
         // Sort by Buyer, SalesPerson, Transaction Total
         System.out.println("\n=== Triple Sort Transactions ===");

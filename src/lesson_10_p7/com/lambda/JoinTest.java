@@ -1,6 +1,6 @@
 package lesson_10_p7.com.lambda;
 
-import com.example.lambda.SalesTxn;
+import lesson_10_p7.com.lambda.SalesTxn;
 
 import java.util.ArrayList;
 import java.util.Comparator;

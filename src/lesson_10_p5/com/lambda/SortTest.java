@@ -33,7 +33,10 @@ public class SortTest {
         
         // Sort by Buyer, SalesPerson, Transaction Total
         System.out.println("\n=== Triple Sort Transactions ===");
-
+        tList.stream()
+                .filter(t -> t.getBuyerName().equals("PticeCo"))
+                .sorted(Comparator.comparing(SalesTxn::getSalesPerson))
+                .forEach(transReport);
         
     }
 }

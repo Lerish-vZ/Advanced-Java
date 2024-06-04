@@ -27,7 +27,9 @@ public class RadioHutTest {
 
         // Print out the total number of transactions
         System.out.print("Total Transactions: ");
-
+        tList.stream()
+                .filter(t -> t.getBuyerName().equals("Radio Hut"))
+                .count();
         
         
         // Print largest transaction

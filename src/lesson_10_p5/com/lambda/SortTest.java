@@ -1,4 +1,4 @@
-package com.example.lambda;
+package lesson_10_p5.com.lambda;
 
 import java.util.Comparator;
 import java.util.List;

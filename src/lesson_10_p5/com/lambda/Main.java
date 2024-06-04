@@ -1,4 +1,6 @@
-package com.example.lambda;
+package lesson_10_p5.com.lambda;
+
+import com.example.lambda.SortTest;
 
 /**
  *

@@ -2,7 +2,9 @@ package lesson_10_p3.com.lambda;
 
 import lesson_10_p3.com.lambda.SalesTxn;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Consumer;
 
 /**
@@ -35,7 +37,10 @@ public class RadioHutTest {
         
         // Print largest transaction
         System.out.println("=== Radio Hut Largest ===");
-
+            Optional<SalesTxn> tLarge = tList.stream()
+                    .filter(t -> t.getBuyerName().equals("Radio Hut"))
+                            .max(Comparator.comparing(SalesTxn::getTransactionTotal));
+            if(tLarge.isPresent()){ radioReport.accept(tLarge.get());}
         
         
         // Print smallest transaction

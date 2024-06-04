@@ -40,14 +40,17 @@ public class RadioHutTest {
             Optional<SalesTxn> tLarge = tList.stream()
                     .filter(t -> t.getBuyerName().equals("Radio Hut"))
                             .max(Comparator.comparing(SalesTxn::getTransactionTotal));
+            
             if(tLarge.isPresent()){ radioReport.accept(tLarge.get());}
         
         
         // Print smallest transaction
         System.out.println("=== Radio Hut Smallest ===");
-
+        Optional<SalesTxn> tSmall = tList.stream()
+                .filter(t -> t.getBuyerName().equals("Radio Hut"))
+                .min(Comparator.comparing(SalesTxn::getTransactionTotal));
         
-        
+        if (tSmall.isPresent()){ radioReport.accept(tSmall.get());}
         
     }
 }

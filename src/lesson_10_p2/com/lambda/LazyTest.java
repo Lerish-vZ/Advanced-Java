@@ -32,7 +32,10 @@ public class LazyTest {
         
         // Print out list normally
         System.out.println("=== Widget Pro Quantity in CO ===");
-
+            tList.stream()
+                    .filter(t -> t.getProduct().equals("Widget Pro"))
+                    .filter(t -> t.getState().equals(State.CO))
+                            .forEach(quantReport);
         
         
         // Print out all the steps in the list

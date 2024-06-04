@@ -21,8 +21,10 @@ public class RadioHutTest {
         
         // Print out Radio Hut Transactions
         System.out.println("=== Radio Hut Transactions ===");
-
-        
+            tList.stream()
+                    .filter(t -> t.getBuyerName().equals("Radio Hut"))
+                            .forEach(radioReport);
+            
         // Print out the total number of transactions
         System.out.print("Total Transactions: ");
 

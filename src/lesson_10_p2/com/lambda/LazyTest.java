@@ -59,8 +59,7 @@ public class LazyTest {
                 .peek(productSearch)
                 .findFirst();
 
-        if(ft.isPresent()){ quantReport.accept(ft.get());
-        
-        
-    }
+        if(ft.isPresent()){ 
+            quantReport.accept(ft.get());
+        }
 }

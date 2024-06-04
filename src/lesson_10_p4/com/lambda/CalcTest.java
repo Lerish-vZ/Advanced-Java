@@ -44,6 +44,7 @@ public class CalcTest {
         // Print out Average Unit Count
         System.out.println("=== Average Unit Count ===");
         // Replace with Stream
+        OptionalDouble
         OptionalDouble a1 = OptionalDouble.of(0);
         
         if (a1.isPresent()){

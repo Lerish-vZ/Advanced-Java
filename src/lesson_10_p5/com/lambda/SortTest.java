@@ -22,20 +22,21 @@ public class SortTest {
         System.out.println("=== PriceCo Transactions ===");
         tList.stream()
                         .filter(t -> t.getBuyerName().equals("PticeCo"))
-                                .sorted(Comparator.comparing(SalesTxn::getSalesPerson))
+                                .sorted(Comparator.comparing(SalesTxn::getTransactionTotal))
                                         .forEach(transReport);
         
         System.out.println("\n=== PriceCo Transactions Reversed ===");
         tList.stream()
                 .filter(t -> t.getBuyerName().equals("PticeCo"))
-                .sorted(Comparator.comparing(SalesTxn::getSalesPerson).reversed())
+                .sorted(Comparator.comparing(SalesTxn::getTransactionTotal).reversed())
                 .forEach(transReport);
         
         // Sort by Buyer, SalesPerson, Transaction Total
         System.out.println("\n=== Triple Sort Transactions ===");
         tList.stream()
                 .filter(t -> t.getBuyerName().equals("PticeCo"))
-                .sorted(Comparator.comparing(SalesTxn::getSalesPerson))
+                .sorted(Comparator
+                        .comparing(SalesTxn::getSalesPerson))
                 .forEach(transReport);
         
     }

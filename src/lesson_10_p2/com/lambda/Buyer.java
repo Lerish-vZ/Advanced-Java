@@ -1,6 +1,6 @@
 package lesson_10_p2.com.lambda;
 
-import com.example.lambda.BuyerClass;
+import lesson_10_p2.com.lambda.BuyerClass;
 
 import java.util.HashMap;
 import java.util.Map;

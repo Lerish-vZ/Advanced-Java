@@ -1,6 +1,6 @@
 package lesson_10_p2.com.lambda;
 
-import com.example.lambda.SalesTxn;
+import lesson_10_p2.com.lambda.SalesTxn;
 
 import java.util.List;
 import java.util.Optional;

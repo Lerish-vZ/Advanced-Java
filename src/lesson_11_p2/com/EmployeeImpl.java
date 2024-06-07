@@ -34,9 +34,12 @@ public class EmployeeImpl {
         }
     }
 
-    public Employee findById(int id) 
-    {
-        return employeeArray[id];
+    public Employee findById(int id) throws InvalidOperationException {
+        try {
+            return employeeArray[id];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            throw new InvalidOperationException("Error finding employee ", e);
+        }
     }
     public Employee[] getAllEmployees() {
         List<Employee> emps = new ArrayList<>();

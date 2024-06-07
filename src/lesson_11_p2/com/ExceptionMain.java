@@ -1,2 +1,4 @@
-package lesson_11_p2.com;public class ExceptionMain {
+package lesson_11_p2.com;
+
+public class ExceptionMain {
 }

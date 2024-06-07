@@ -17,6 +17,11 @@ public class EmployeeImpl {
         if(employeeArray[emp.getId()] != null) {
             throw new InvalidOperationException("Error adding employee, employee if already exists " + emp.getId());
         }
+        try {
+            employeeArray[emp.getId()] = emp;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            throw new InvalidOperationException("Error adding employee, id must be less than " + employeeArray.length);
+        }
     }
 
     public void delete(int id) {

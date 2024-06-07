@@ -1,5 +1,6 @@
 package lesson_11_p2.com;
 
+import javax.naming.InvalidNameException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,8 +13,10 @@ public class EmployeeImpl {
     EmployeeImpl() {
     }
 
-    public void add(Employee emp) {
-
+    public void add(Employee emp) throws InvalidOperationException {
+        if(employeeArray[emp.getId()] != null) {
+            throw new InvalidOperationException("Error adding employee, employee if already exists " + emp.getId());
+        }
     }
 
     public void delete(int id) {

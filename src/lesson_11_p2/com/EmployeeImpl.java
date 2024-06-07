@@ -24,8 +24,14 @@ public class EmployeeImpl {
         }
     }
 
-    public void delete(int id) {
-
+    public void delete(int id) throws InvalidOperationException {
+        if(employeeArray[id] == null) {
+            throw new InvalidOperationException("Error deleting employee, employee does not exist " + id);
+        }
+        try { employeeArray[id] = null; }
+        catch (ArrayIndexOutOfBoundsException e) {
+            throw new InvalidOperationException("Error deleting employee, id must be less than " + employeeArray.length);
+        }
     }
 
     public Employee findById(int id) 

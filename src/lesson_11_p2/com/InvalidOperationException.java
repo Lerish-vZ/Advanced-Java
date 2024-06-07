@@ -9,11 +9,11 @@ public class InvalidOperationException extends Exception {
         super(message);
     }
 
-    public InvalidOperationException(String message, Throwable cause) {
-        super(message, cause);
-    }
-
     public InvalidOperationException(Throwable cause) {
         super(cause);
+    }
+
+    public InvalidOperationException(String message, Throwable cause) {
+        super(message, cause);
     }
 }

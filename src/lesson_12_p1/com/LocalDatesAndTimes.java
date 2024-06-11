@@ -64,14 +64,19 @@ public class LocalDatesAndTimes {
     //     *  School is taught Monday - Friday
     //   How many days of school are there?
     //   Hint: keep track of the short weeks also
-    int exludeWeeks = 5;
+    int excludeWeeks = 5;
     LocalDate schoolStarts = LocalDate.of(2014,SEPTEMBER, 1).with(TemporalAdjusters.firstInMonth(TUESDAY)).with(TemporalAdjusters.next(TUESDAY));
     LocalDate endOfFirstWeek = schoolStarts.with(TemporalAdjusters.next(FRIDAY));
     long firstWeekDays = schoolStarts.until(endOfFirstWeek, DAYS) + 1;
     System.out.println("School Starts: " + schoolStarts);
     LocalDate schoolEnds = LocalDate.of(2015, JUNE, 25);
     System.out.println("School Ends: " + schoolEnds);
-    
+    long lastWeeksDays = 0;
+    if(schoolEnds.getDayOfWeek() != MONDAY){
+      LocalDate lastWeekStart = schoolEnds.with(TemporalAdjusters.previous(MONDAY));
+      lastWeeksDays = lastWeekStart.until(schoolEnds, DAYS) + 1;
+      excludeWeeks++;
+    }
     
     // A meeting is schedule for 1:30 PM next Tuesday. If today is Tuesday, assume it is today.
     //   What is the time of the week's meetings?

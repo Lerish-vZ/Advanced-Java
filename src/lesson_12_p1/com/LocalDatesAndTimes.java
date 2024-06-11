@@ -34,11 +34,13 @@ public class LocalDatesAndTimes {
     System.out.println("Days in the year he was born: " + bennedict.lengthOfYear());
     LocalDate now = LocalDate.now();
     System.out.println("Bennedict is " + bennedict.until(now, DECADES) + " decades old.");
-    System.out.println("It was a " + bennedict.plusYears(21).getDayOfWeek() + " on his 21st birthday.");
+    System.out.println("It was a " + bennedict.plusYears(21).getDayOfWeek() + " on his 21st birthday./n");
     
     // Train departs Boston at 1:45PM and arrives New York 7:25PM
     //   How many minutes long is the train ride?
     //   If the train was delayed 1 hour 19 minutes, what is the actual arrival time?
+    LocalTime depart = LocalTime.of(13, 45);
+    LocalTime arrive = LocalTime.of(19, 25);
     
     
     // Flight: Boston to Miami, leaves March 24th 9:15PM. Flight time is 4 hours 15 minutes

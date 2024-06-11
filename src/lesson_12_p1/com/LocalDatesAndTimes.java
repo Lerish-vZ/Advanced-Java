@@ -84,7 +84,11 @@ public class LocalDatesAndTimes {
     
     // A meeting is schedule for 1:30 PM next Tuesday. If today is Tuesday, assume it is today.
     //   What is the time of the week's meetings?
-   
+    LocalTime meetingTime = LocalTime.of(13, 30);
+    LocalDate meetingDate = LocalDate.now().with(TemporalAdjusters.nextOrSame(TUESDAY));
+    LocalDateTime meeting = LocalDateTime.of(meetingDate, meetingTime);
+    System.out.println("The meeting time is: " + meeting);
+    System.out.println("");
   }
   
 }

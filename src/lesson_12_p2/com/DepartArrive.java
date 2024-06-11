@@ -1,5 +1,6 @@
 package lesson_12_p2.com;
 
+import javax.swing.*;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -21,7 +22,11 @@ public class DepartArrive {
     //   What is the local time in Boston when the flight takes off?
     //   What is the local time at Boston Logan airport when the flight arrives?
     //   What is the local time in San Francisco when the flight arrives?
-  
+    LocalDateTime departure = LocalDateTime.of(2014, JUNE, 13, 22, 30);
+    ZonedDateTime departSFO = ZonedDateTime.of(departure, SFO);
+    System.out.println("Flight 123 departs SFO at: " + departSFO);
+
+
 
     // Flight 456, San Francisco to Bangalore, India, leaves SFO at Saturday, 10:30 PM June 28, 2014
     // The flight time is 22 hours

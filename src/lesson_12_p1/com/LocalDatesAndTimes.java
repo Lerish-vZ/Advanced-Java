@@ -66,6 +66,11 @@ public class LocalDatesAndTimes {
     //   Hint: keep track of the short weeks also
     int exludeWeeks = 5;
     LocalDate schoolStarts = LocalDate.of(2014,SEPTEMBER, 1).with(TemporalAdjusters.firstInMonth(TUESDAY)).with(TemporalAdjusters.next(TUESDAY));
+    LocalDate endOfFirstWeek = schoolStarts.with(TemporalAdjusters.next(FRIDAY));
+    long firstWeekDays = schoolStarts.until(endOfFirstWeek, DAYS) + 1;
+    System.out.println("School Starts: " + schoolStarts);
+    LocalDate schoolEnds = LocalDate.of(2015, JUNE, 25);
+    System.out.println("School Ends: " + schoolEnds);
     
     
     // A meeting is schedule for 1:30 PM next Tuesday. If today is Tuesday, assume it is today.

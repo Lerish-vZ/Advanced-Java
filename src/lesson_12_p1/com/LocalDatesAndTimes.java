@@ -41,7 +41,9 @@ public class LocalDatesAndTimes {
     //   If the train was delayed 1 hour 19 minutes, what is the actual arrival time?
     LocalTime depart = LocalTime.of(13, 45);
     LocalTime arrive = LocalTime.of(19, 25);
-    
+    System.out.println("Planned Travel Time: " + depart.until(arrive, MINUTES) + " minutes.");
+    System.out.println("Delayed Arrival Time: " + depart.plusHours(1).plusMinutes(19));
+    System.out.println("");
     
     // Flight: Boston to Miami, leaves March 24th 9:15PM. Flight time is 4 hours 15 minutes
     //   When does it arrive in Miami?

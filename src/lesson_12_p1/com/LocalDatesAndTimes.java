@@ -52,6 +52,7 @@ public class LocalDatesAndTimes {
     LocalDateTime arriveMiami = leaveBoston.plusHours(4).plusMinutes(15);
     System.out.println("Arrival Time: " + arriveMiami);
     System.out.println("Delayed Arrival: " + arrive.plusHours(4).plusMinutes(27));
+    System.out.println("");
     
     // School semester starts the second Tuesday of September of this year.
     //   Hint: Look at the TemporalAdjusters class
@@ -63,6 +64,8 @@ public class LocalDatesAndTimes {
     //     *  School is taught Monday - Friday
     //   How many days of school are there?
     //   Hint: keep track of the short weeks also
+    int exludeWeeks = 5;
+    LocalDate schoolStarts = LocalDate.of(2014,SEPTEMBER, 1).with(TemporalAdjusters.firstInMonth(TUESDAY)).with(TemporalAdjusters.next(TUESDAY));
     
     
     // A meeting is schedule for 1:30 PM next Tuesday. If today is Tuesday, assume it is today.

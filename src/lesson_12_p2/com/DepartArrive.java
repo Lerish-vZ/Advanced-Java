@@ -54,7 +54,13 @@ public class DepartArrive {
     // Flight time is 5 hours 30 minutes.
     //   What day and time does the flight arrive in Boston?
     //   What happened?
-
+    departure = LocalDateTime.of(2014, NOVEMBER, 1, 22, 30);
+    departSFO = ZonedDateTime.of(departure, SFO);
+    System.out.println("Flight 123 departs SFO at: " + departSFO);
+    departTimeAtBOS = departSFO.toOffsetDateTime().atZoneSameInstant(BOS);
+    System.out.println("Local time BOS at departure: " + departTimeAtBOS);
+    System.out.println("Flight time: 5 hours 30 minutes");
+    
   }
 
 }

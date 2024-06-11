@@ -20,7 +20,7 @@ public class LocalDatesAndTimes {
     LocalDate abeBorn = LocalDate.of(1809, FEBRUARY, 12);
     LocalDate abeDies = LocalDate.of(1855, APRIL, 15);
     System.out.println("Abe was " + abeBorn.until(abeDies, YEARS) + " when he died.");
-    System.out.println("Abe lived for " + abeBorn.until(abeDies, DAYS) + " days./n");
+    System.out.println("Abe lived for " + abeBorn.until(abeDies, DAYS) + " days.\n");
 
 
     
@@ -34,7 +34,7 @@ public class LocalDatesAndTimes {
     System.out.println("Days in the year he was born: " + bennedict.lengthOfYear());
     LocalDate now = LocalDate.now();
     System.out.println("Bennedict is " + bennedict.until(now, DECADES) + " decades old.");
-    System.out.println("It was a " + bennedict.plusYears(21).getDayOfWeek() + " on his 21st birthday./n");
+    System.out.println("It was a " + bennedict.plusYears(21).getDayOfWeek() + " on his 21st birthday.\n");
     
     // Train departs Boston at 1:45PM and arrives New York 7:25PM
     //   How many minutes long is the train ride?

@@ -20,7 +20,8 @@ public class LocalDatesAndTimes {
     LocalDate abeBorn = LocalDate.of(1809, FEBRUARY, 12);
     LocalDate abeDies = LocalDate.of(1855, APRIL, 15);
     System.out.println("Abe was " + abeBorn.until(abeDies, YEARS) + " when he died.");
-    System.out.println("Abe lived for " + abeBorn.until(abeDies, DAYS) + " days.");
+    System.out.println("Abe lived for " + abeBorn.until(abeDies, DAYS) + " days./n");
+
 
     
     // Bennedict Cumberbatch, July 19, 1976
@@ -28,7 +29,9 @@ public class LocalDatesAndTimes {
     //   How many days in the year he was born?
     //   How many decades old is he?
     //   What was the day of the week on his 21st birthday?
-    
+    LocalDate bennedict = LocalDate.of(1976, JULY, 19);
+    System.out.println("Bennedict was born in a leap year: " + bennedict.isLeapYear());
+    System.out.println("Days in the year he was born: " + bennedict.lengthOfYear());
     
     // Train departs Boston at 1:45PM and arrives New York 7:25PM
     //   How many minutes long is the train ride?

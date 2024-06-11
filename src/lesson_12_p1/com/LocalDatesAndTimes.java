@@ -77,6 +77,10 @@ public class LocalDatesAndTimes {
       lastWeeksDays = lastWeekStart.until(schoolEnds, DAYS) + 1;
       excludeWeeks++;
     }
+    long days = ((schoolStarts.until(schoolEnds, WEEKS) - excludeWeeks) * 5);
+    days = days + firstWeekDays + lastWeeksDays;
+    System.out.println("Number of school days: " + days);
+    System.out.println(" ");
     
     // A meeting is schedule for 1:30 PM next Tuesday. If today is Tuesday, assume it is today.
     //   What is the time of the week's meetings?

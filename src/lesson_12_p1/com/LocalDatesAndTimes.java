@@ -49,6 +49,9 @@ public class LocalDatesAndTimes {
     //   When does it arrive in Miami?
     //   When does it arrive if the flight is delays 4 hours 27 minutes?
     LocalDateTime leaveBoston = LocalDateTime.of(2024, MARCH, 24, 21, 15);
+    LocalDateTime arriveMiami = leaveBoston.plusHours(4).plusMinutes(15);
+    System.out.println("Arrival Time: " + arriveMiami);
+    System.out.println("Delayed Arrival: " + arrive.plusHours(4).plusMinutes(27));
     
     // School semester starts the second Tuesday of September of this year.
     //   Hint: Look at the TemporalAdjusters class

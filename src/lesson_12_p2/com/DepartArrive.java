@@ -30,7 +30,9 @@ public class DepartArrive {
     System.out.println("Flight time: 5 hours 30 minutes.");
     ZonedDateTime arriveBOS = departSFO.plusHours(5).plusMinutes(30).toOffsetDateTime().atZoneSameInstant(BOS);
     System.out.println("Flight 123 arrives BOS: " + arriveBOS);
-
+    ZonedDateTime arriveTimeAtSFO = arriveBOS.toOffsetDateTime().atZoneSameInstant(SFO);
+    System.out.println("Local time SFO at arrival: " + arriveTimeAtSFO);
+    System.out.println("");
 
     // Flight 456, San Francisco to Bangalore, India, leaves SFO at Saturday, 10:30 PM June 28, 2014
     // The flight time is 22 hours

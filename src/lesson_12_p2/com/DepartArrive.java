@@ -46,6 +46,9 @@ public class DepartArrive {
     System.out.println("Flight time: 22 hours");
     ZonedDateTime arriveBLR = departSFO.plusHours(22).toOffsetDateTime().atZoneSameInstant(BLR);
     System.out.println("Flight 456 arrives BLR: " + arriveBLR);
+    arriveTimeAtSFO = arriveBLR.toOffsetDateTime().atZoneSameInstant(SFO);
+    System.out.println("Local time SFO at arrival: " + arriveTimeAtSFO);
+    System.out.println(" ");
 
     // Flight 123, San Francisco to Boston, leaves SFO at 10:30 PM Saturday, November 1st, 2014
     // Flight time is 5 hours 30 minutes.

@@ -1,4 +1,4 @@
-package com.example;
+package lesson_12_p1.com;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

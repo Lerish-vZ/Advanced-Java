@@ -48,7 +48,7 @@ public class LocalDatesAndTimes {
     // Flight: Boston to Miami, leaves March 24th 9:15PM. Flight time is 4 hours 15 minutes
     //   When does it arrive in Miami?
     //   When does it arrive if the flight is delays 4 hours 27 minutes?
-    
+    LocalDateTime leaveBoston = LocalDateTime.of(2024, MARCH, 24, 21, 15);
     
     // School semester starts the second Tuesday of September of this year.
     //   Hint: Look at the TemporalAdjusters class

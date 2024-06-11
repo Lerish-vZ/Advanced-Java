@@ -12,7 +12,8 @@ public class DepartArrive {
     //   * Use America/New_York as the time zone for Boston Logan Airport(BOS).
     //   * Use America/Los_Angeles as the time zone for San Francisco Airport (SFO).
     //   * Use Asia/Calcutta as the time zone for Bangalore's Bengaluru International Airport (BLR)
-
+    ZoneId SFO = ZoneId.of("America/Los_Angeles");
+    
 
     // Flight 123, San Francisco to  Boston, leaves SFO at 10:30 PM June 13, 2014
     // The flight is 5 hours 30 minutes

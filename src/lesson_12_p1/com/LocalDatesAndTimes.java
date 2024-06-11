@@ -34,7 +34,7 @@ public class LocalDatesAndTimes {
     System.out.println("Days in the year he was born: " + bennedict.lengthOfYear());
     LocalDate now = LocalDate.now();
     System.out.println("Bennedict is " + bennedict.until(now, DECADES) + " decades old.");
-    
+    System.out.println("It was a " + bennedict.plusYears(21).getDayOfWeek() + " on his 21st birthday.");
     
     // Train departs Boston at 1:45PM and arrives New York 7:25PM
     //   How many minutes long is the train ride?

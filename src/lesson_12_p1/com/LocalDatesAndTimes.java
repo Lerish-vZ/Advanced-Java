@@ -6,6 +6,8 @@ import java.time.LocalTime;
 import static java.time.Month.*;  // Months
 import static java.time.DayOfWeek.*; // Days of the week
 import static java.time.temporal.ChronoUnit.*;  // DAYS, HOURS, etc
+
+import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
 
 public class LocalDatesAndTimes {
@@ -17,6 +19,8 @@ public class LocalDatesAndTimes {
     //   How many days did he live?
     LocalDate abeBorn = LocalDate.of(1809, FEBRUARY, 12);
     LocalDate abeDies = LocalDate.of(1855, APRIL, 15);
+    System.out.println("Abe was " + abeBorn.until(abeDies, YEARS) + " when he died.");
+    System.out.println("Abe lived for " + abeBorn.until(abeDies, DAYS) + " days.");
 
     
     // Bennedict Cumberbatch, July 19, 1976

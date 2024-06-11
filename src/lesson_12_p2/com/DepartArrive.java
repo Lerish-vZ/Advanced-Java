@@ -60,7 +60,11 @@ public class DepartArrive {
     departTimeAtBOS = departSFO.toOffsetDateTime().atZoneSameInstant(BOS);
     System.out.println("Local time BOS at departure: " + departTimeAtBOS);
     System.out.println("Flight time: 5 hours 30 minutes");
-    
+    arriveBOS = departSFO.plusHours(5).plusMinutes(30).toOffsetDateTime().atZoneSameInstant(BOS);
+    System.out.println("Flight 123 arrives BOS: " + arriveBOS);
+    arriveTimeAtSFO = arriveBLR.toOffsetDateTime().atZoneSameInstant(SFO);
+    System.out.println("Local time SFO at arrival: " + arriveTimeAtSFO);
+    System.out.println("");
   }
 
 }

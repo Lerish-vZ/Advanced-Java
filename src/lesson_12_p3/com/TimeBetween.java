@@ -34,7 +34,7 @@ public class TimeBetween {
     }
 
     // Print the date out
-    System.out.println("Date entered was: ");
+    System.out.println("Date entered was: " + aDate.format(formatter));
     LocalDate now = LocalDate.now();
     Period between;
     if(aDate.isBefore(now)) {

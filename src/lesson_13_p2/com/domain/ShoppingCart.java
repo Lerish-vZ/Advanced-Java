@@ -1,4 +1,4 @@
-package com.example.domain;
+package lesson_13_p2.com.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;

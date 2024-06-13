@@ -1,4 +1,4 @@
-package com.example;
+package lesson_13_p1.com;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

@@ -23,6 +23,10 @@ public class FileScanInteractive {
     }
 
     public static void main(String[] args) {
-        // Your code goes here
+        if(args.length < 1) {
+            System.out.println("Usage: java ScanFileInteractive <file to search>");
+            System.exit(-1);
+        }
+        
     }
 }

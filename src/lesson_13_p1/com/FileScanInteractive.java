@@ -12,8 +12,8 @@ public class FileScanInteractive {
     public int countTokens(String file, String search) throws IOException {
         int instanceCount = 0;
         try (FileReader fr = new FileReader(file);
-                BufferedReader br = new BufferedReader(fr);
-                Scanner s = new Scanner(br)) {
+             BufferedReader br = new BufferedReader(fr);
+             Scanner s = new Scanner(br)) {
             s.useDelimiter("\\W");
             while (s.hasNext()) {
                 if (search.equalsIgnoreCase(s.next().trim())) {
@@ -25,7 +25,7 @@ public class FileScanInteractive {
     }
 
     public static void main(String[] args) {
-        if(args.length < 1) {
+        if (args.length < 1) {
             System.out.println("Usage: java ScanFileInteractive <file to search>");
             System.exit(-1);
         }
@@ -34,7 +34,7 @@ public class FileScanInteractive {
         FileScanInteractive scan = new FileScanInteractive();
 
 
-        try(BufferedReader in = new BufferedReader(new InputStreamReader(System.in))) {
+        try (BufferedReader in = new BufferedReader(new InputStreamReader(System.in))) {
             String search = "";
             System.out.println("Searching through the file: " + file);
             while (true) {
@@ -46,8 +46,9 @@ public class FileScanInteractive {
                 int count = scan.countTokens(file, search);
                 System.out.println("The word \"" + search + "\" appears" + " " + count + " times in the file.");
             }
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.out.println("Exception: " + e);
             System.exit(-1);
+        }
     }
 }

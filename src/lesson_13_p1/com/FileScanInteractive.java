@@ -1,8 +1,10 @@
 package lesson_13_p1.com;
 
+import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class FileScanInteractive {
@@ -27,6 +29,16 @@ public class FileScanInteractive {
             System.out.println("Usage: java ScanFileInteractive <file to search>");
             System.exit(-1);
         }
-        
+        String file = args[0];
+
+        FileScanInteractive scan = new FileScanInteractive();
+
+
+        try(BufferedReader in = new BufferedReader(new InputStreamReader(System.in))) {
+            String search = "";
+            System.out.println("Searching through the file: " + file);
+            search = in.readLine().trim();
+            
+        }
     }
 }

@@ -37,8 +37,15 @@ public class FileScanInteractive {
         try(BufferedReader in = new BufferedReader(new InputStreamReader(System.in))) {
             String search = "";
             System.out.println("Searching through the file: " + file);
-            search = in.readLine().trim();
-            
-        }
+            while (true) {
+                System.out.print("Enter the search string or q to exit: ");
+                search = in.readLine().trim();
+                if (search.equalsIgnoreCase("q")) {
+                    break;
+                }
+                int count = scan.countTokens(file, search);
+                System.out.println("The word \"" + search + "\" appears" + " " + count + " times in the file.");
+            }
+        } catch(IOException)
     }
 }

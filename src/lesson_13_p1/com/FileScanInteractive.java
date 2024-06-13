@@ -46,6 +46,8 @@ public class FileScanInteractive {
                 int count = scan.countTokens(file, search);
                 System.out.println("The word \"" + search + "\" appears" + " " + count + " times in the file.");
             }
-        } catch(IOException)
+        } catch(IOException e) {
+            System.out.println("Exception: " + e);
+            System.exit(-1);
     }
 }

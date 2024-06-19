@@ -19,9 +19,13 @@ public class P03NioReadAll {
 
         try{
             // Read file into array here
-            
+            fileArr = Files.readAllLines(file);
+
             System.out.println("\n=== Rosencrantz ===");
             // Filter for Ros. here
+            fileArr.stream()
+                            .filter(line -> line.contains("Ros."))
+                                    .forEach(line -> System.out.println(line));
 
             
             System.out.println("\n=== Guildenstern ===");

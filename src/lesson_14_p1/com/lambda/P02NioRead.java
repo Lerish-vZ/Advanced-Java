@@ -15,7 +15,7 @@ public class P02NioRead {
      
         try{ // Create Try with Resources here
             
-            Stream<String> lines = Files.lines(Paths.get("hamlet.txt"));
+            Stream<String> lines = Files.lines(Paths.get("C:\\YourJavaDirectory/hamlet.txt"));
             
             System.out.println("\n=== Entire File ===");
             lines.forEach(line -> System.out.println(line)); 

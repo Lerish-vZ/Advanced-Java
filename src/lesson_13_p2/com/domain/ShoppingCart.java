@@ -1,5 +1,7 @@
 package lesson_13_p2.com.domain;
 
+import com.example.domain.Item;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -50,5 +52,16 @@ public class ShoppingCart implements Serializable {
     private void writeObject(ObjectOutputStream out) throws IOException {
         oos.defaultWriteObject();
         oss.writeObject(new Date());
+    }
+
+    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
+        ois.defaultReadObject();
+        if (cartTotal == 0 && (items.size() > 0)) {
+            for (Item item : items) {
+                cartTotal += item.getCost();
+            }
+        }
+        Date date = (Date)ois.readObject();
+        System.out.println("Resorted Shopping Cart from: " + DateFormat.getDateInstance().format(date));
     }
 }

@@ -43,7 +43,8 @@ public class SerializeTest {
             o.writeObject(cart);
         } catch (IOException e) {
             System.out.println("Exception serializing " + cartFile + ": " + e);
-            System.exit(-1);
+        System.exit(-1);
         }
+        System.out.println("Successfully serialized shopping cart with ID: " + cart.getCartID());
     }
 }

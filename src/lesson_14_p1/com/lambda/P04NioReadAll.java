@@ -25,7 +25,7 @@ public class P04NioReadAll {
         long wordCount = fileArr.stream()
                 .flatMap(line -> Stream.of(line.split(" "))) //splits line data into words
                 .filter(word -> word.contains("lord"))
-                .peek(word -> System.out.println(word))
+                .peek(word -> System.out.println(word)) //does lambda and returns elements to stream (makes data available to next stream in pipeline)
                 .count();
         
         System.out.println("Word count: " + wordCount);

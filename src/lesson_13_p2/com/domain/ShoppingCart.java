@@ -1,8 +1,14 @@
 package lesson_13_p2.com.domain;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+
 
 public class ShoppingCart implements Serializable {
 
@@ -39,5 +45,10 @@ public class ShoppingCart implements Serializable {
 
     public List<Item> getItems() {
         return items;
+    }
+
+    private void writeObject(ObjectOutputStream out) throws IOException {
+        oos.defaultWriteObject();
+        oss.writeObject(new Date());
     }
 }

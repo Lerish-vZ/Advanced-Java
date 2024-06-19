@@ -1,5 +1,6 @@
 package lesson_13_p2.com.domain;
 
+import lesson_13_p2.com.domain.Item;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -14,7 +15,7 @@ public class ShoppingCart implements Serializable {
 
     private static final long serialVersionUID = 23L;
     private int cartID;
-    private ArrayList<com.example.domain.Item> items;
+    private ArrayList<lesson_13_p2.com.domain.Item> items;
     private int itemCount;
     private transient double cartTotal;
 

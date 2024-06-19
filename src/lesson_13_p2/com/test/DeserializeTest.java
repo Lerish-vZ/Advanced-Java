@@ -1,6 +1,7 @@
 package lesson_13_p2.com.test;
 
-import lesson_13_p2.com.Item;
+
+import lesson_13_p2.com.domain.Item;
 import lesson_13_p2.com.domain.ShoppingCart;
 import java.io.BufferedReader;
 import java.io.FileInputStream;

@@ -22,7 +22,11 @@ public class P04NioReadAll {
         fileArr = Files.readAllLines(file);
 
         System.out.println("\n=== Lord Count ===");
-        long wordCount = 0; // Replace with your pipeline
+        long wordCount = fileArr.stream()
+                .flatMap(line -> Stream.of(line.split(" "))) //splits line data into words
+                .filter(word -> word.contains("lord"))
+                .peek(word -> System.out.println(word))
+                .count();
         
         System.out.println("Word count: " + wordCount);
 

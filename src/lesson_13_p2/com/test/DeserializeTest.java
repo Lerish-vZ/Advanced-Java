@@ -1,9 +1,12 @@
 package lesson_13_p2.com.test;
 
-import com.example.domain.Item;
 import com.example.domain.ShoppingCart;
-
-import java.io.*;
+import com.example.domain.Item;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
 import java.text.NumberFormat;
 import java.util.List;
 
@@ -31,8 +34,8 @@ public class DeserializeTest {
 
         // Your code goes here....
         try(FileInputStream fis = new FileInputStream(cartFile);
-        ObjectInputStream ois = new ObjectInputStream(fis)) {
-            cart = (ShoppingCart)in.readObject();
+        ObjectInputStream in = new ObjectInputStream(fis)) {
+            cart = (ShoppingCart) in.readObject();
         } catch (ClassNotFoundException | IOException e) {
             System.out.println("Exception deseriaziling " + cartFile + ": " + e);
             System.exit(-1);

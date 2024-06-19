@@ -48,12 +48,12 @@ public class ShoppingCart implements Serializable {
         return items;
     }
 
-    private void writeObject(ObjectOutputStream out) throws IOException {
+    private void writeObject(ObjectOutputStream oos) throws IOException {
         oos.defaultWriteObject();
-        oss.writeObject(new Date());
+        oos.writeObject(new Date());
     }
 
-    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
+    private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
         ois.defaultReadObject();
         if (cartTotal == 0 && (items.size() > 0)) {
             for (Item item : items) {

@@ -13,10 +13,11 @@ import java.util.stream.Stream;
 public class DirWalk {
   public static void main(String[] args) {  
 
-    try{// Add try with resources here
+    try(Stream<Path> files = Files.walk(Paths.get("."))){// Add try with resources here
 
         System.out.println("\n=== Dir walk ===");
-        // Print directory list here  
+        // Print directory list here
+        files.forEach(line -> System.out.println(line));
 
     }catch (IOException e){
         System.out.println("Error: " + e.getMessage());

@@ -16,7 +16,7 @@ public class P04NioReadAll {
         
     Path file =  Paths.get("hamlet.txt");
     List<String> fileArr;
-/* Remove these comments
+
     try{
         // Read fileinto array here
 
@@ -33,6 +33,5 @@ public class P04NioReadAll {
     }catch (IOException e){
         System.out.println("Error: " + e.getMessage());
     }
-*/
   } 
 }

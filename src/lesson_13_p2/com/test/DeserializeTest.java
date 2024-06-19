@@ -3,6 +3,7 @@ package lesson_13_p2.com.test;
 import com.example.domain.ShoppingCart;
 
 import java.io.*;
+import java.text.NumberFormat;
 
 public class DeserializeTest {
 
@@ -35,5 +36,12 @@ public class DeserializeTest {
             System.exit(-1);
         }
         System.out.println("Successfully deserialized cart with ID:  " + cart.getCartID());
+
+        System.out.println("Shopping cart contains: ");
+        List<Item> cartContents = cart.getItems();
+        for(Item item : cartContents) {
+            System.out.println(item);
+        }
+        System.out.println("Shopping cart total: " + NumberFormat.getCurrencyInstance().format(cart.getCartTotal()));
     }
 }

@@ -19,6 +19,7 @@ public class P04NioReadAll {
 
     try{
         // Read fileinto array here
+        fileArr = Files.readAllLines(file);
 
         System.out.println("\n=== Lord Count ===");
         long wordCount = 0; // Replace with your pipeline

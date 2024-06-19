@@ -1,7 +1,5 @@
 package lesson_13_p2.com.domain;
 
-import com.example.domain.Item;
-
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;

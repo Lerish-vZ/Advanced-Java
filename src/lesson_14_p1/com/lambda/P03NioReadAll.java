@@ -30,7 +30,9 @@ public class P03NioReadAll {
             
             System.out.println("\n=== Guildenstern ===");
             // Filter for Guil. here
-
+            fileArr.stream()
+                    .filter(line -> line.contains("Guil."))
+                    .forEach(line -> System.out.println(line));
             
 
         }catch (IOException e){

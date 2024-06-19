@@ -2,9 +2,8 @@ package lesson_13_p2.com.test;
 
 import com.example.domain.Item;
 import com.example.domain.ShoppingCart;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+
+import java.io.*;
 import java.text.NumberFormat;
 
 public class SerializeTest {
@@ -37,7 +36,14 @@ public class SerializeTest {
                 + NumberFormat.getCurrencyInstance().format(cart.getCartTotal()));
 
         String cartFile = directory + "cart" + cart.getCartID() + ".ser";
+
         // Your code goes here....
-        
+        try(FileOutputStream fos = new FileOutputStream(cartFile);
+        ObjectOutputStream o = new ObjectOutputStream(fos)) {
+            o.writeObject(cart);
+        } catch (IOException e) {
+            System.out.println("Exception serializing " + cartFile + ": " + e);
+            System.exit(-1);
+        }
     }
 }

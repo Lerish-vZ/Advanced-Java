@@ -1,4 +1,4 @@
-package com.example.lambda;
+package lesson_14_p2.com.lambda;
 
 import java.io.IOException;
 import java.nio.file.Files;

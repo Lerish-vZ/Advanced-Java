@@ -1,4 +1,4 @@
-package com.example.test;
+package lesson_13_p2.com.test;
 
 import com.example.domain.Item;
 import com.example.domain.ShoppingCart;
@@ -38,5 +38,6 @@ public class SerializeTest {
 
         String cartFile = directory + "cart" + cart.getCartID() + ".ser";
         // Your code goes here....
+        
     }
 }

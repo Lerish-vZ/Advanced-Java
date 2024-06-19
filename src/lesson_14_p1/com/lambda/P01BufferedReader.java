@@ -1,4 +1,4 @@
-package com.example.lambda;
+package lesson_14_p1.com.lambda;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

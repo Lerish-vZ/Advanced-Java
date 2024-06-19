@@ -14,7 +14,7 @@ import java.util.List;
 public class DeserializeTest {
 
     public static void main(String[] args) {
-        String directory = "/home/oracle/labs/13-IO_Fundamentals/practices/practice2/SerializeShoppingCart";
+        String directory = "C:\\YourJavaDirectory";
         String cartId = null;
         System.out.println("Enter the ID of the cart file to deserialize or q exit.");
         // Wrap the System.in InputStream with a BufferedReader to read

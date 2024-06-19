@@ -12,7 +12,7 @@ import java.util.stream.Stream;
  */
 public class DirWalk {
   public static void main(String[] args) {  
-/* Remove Comments
+
     try{// Add try with resources here
 
         System.out.println("\n=== Dir walk ===");
@@ -32,6 +32,6 @@ public class DirWalk {
     }catch (IOException e){
         System.out.println("Error: " + e.getMessage());
     }
-*/  
+
   } 
 }

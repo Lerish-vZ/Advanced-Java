@@ -15,7 +15,7 @@ public class P03NioReadAll {
     public static void main(String[] args) {
         
         List<String> fileArr;
-        Path file =  Paths.get("hamlet.txt");
+        Path file =  Paths.get("C:\\YourJavaDirectory/hamlet.txt");
 
         try{
             // Read file into array here

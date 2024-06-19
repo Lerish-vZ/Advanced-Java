@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 public class P04NioReadAll {
     public static void main(String[] args) {
 
-        Path file = Paths.get("hamlet.txt");
+        Path file = Paths.get("C:\\YourJavaDirectory/hamlet.txt");
         List<String> fileArr;
 
         try {

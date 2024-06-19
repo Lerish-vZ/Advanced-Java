@@ -1,7 +1,7 @@
 package lesson_13_p2.com.test;
 
-import com.example.domain.Item;
-import com.example.domain.ShoppingCart;
+import lesson_13_p2.com.domain.Item;
+import lesson_13_p2.com.domain.ShoppingCart;
 
 import java.io.*;
 import java.text.NumberFormat;

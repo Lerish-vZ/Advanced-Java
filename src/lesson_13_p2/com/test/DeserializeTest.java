@@ -1,9 +1,8 @@
-package com.example.test;
+package lesson_13_p2.com.test;
 
 import com.example.domain.ShoppingCart;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+
+import java.io.*;
 
 public class DeserializeTest {
 
@@ -26,6 +25,15 @@ public class DeserializeTest {
         // Attempt to open the file and deserialize it into an object
         String cartFile = directory + "cart" + cartId + ".ser";
         ShoppingCart cart = null;
+
         // Your code goes here....
+        try(FileInputStream fis = new FileInputStream(cartFile);
+        ObjectInputStream ois = new ObjectInputStream(fis)) {
+            cart = (ShoppingCart)in.readObject();
+        } catch (ClassNotFoundException | IOException e) {
+            System.out.println("Exception deseriaziling " + cartFile + ": " + e);
+            System.exit(-1);
+        }
+        System.out.println("Successfully deserialized cart with ID:  " + cart.getCartID());
     }
 }

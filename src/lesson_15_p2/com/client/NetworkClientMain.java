@@ -44,7 +44,7 @@ public class NetworkClientMain {
         for(RequestResponse lookup : callables.keySet()) {
             Future<RequestResponse> future = callables.get(lookup);
             try {
-                lookup = future.get;
+                lookup = future.get();
                 System.out.println(lookup.host + ": " + lookup.port + " " + lookup.response);
             } catch (ExecutionException | InterruptedException ex) {
                 System.out.println("Error talking to " + lookup.host + ": " + lookup.port);

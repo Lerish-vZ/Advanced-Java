@@ -1,4 +1,4 @@
-package com.example.server;
+package lesson_15_p2.com.server;
 
 import java.io.BufferedWriter;
 import java.io.IOException;

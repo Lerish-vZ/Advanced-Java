@@ -31,6 +31,9 @@ public class NetworkClientMain {
         String host = "localhost";
         for (int port = 10000; port < 10010; port++) {
             RequestResponse lookup = new RequestResponse(host, port);
+            NetworkClientCallable callable = new NetworkClientCallable(lookup);
+            Future<RequestResponse> future = es.submit(callable);
+            callables.put(lookup, future);
         }
     }
 }

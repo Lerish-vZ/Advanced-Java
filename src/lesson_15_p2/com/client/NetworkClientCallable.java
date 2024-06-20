@@ -18,8 +18,8 @@ public class NetworkClientCallable implements Callable<RequestResponse> {
 
     @Override
     public RequestResponse call() throws Exception {
-        try(Socket sock = new Socket(lookup.host, lookup.port);
-                Scanner scanner = new Scanner(sock.getInputStream())) {
+        try (Socket sock = new Socket(lookup.host, lookup.port);
+             Scanner scanner = new Scanner(sock.getInputStream())) {
             lookup.response = scanner.next();
             return lookup;
         }

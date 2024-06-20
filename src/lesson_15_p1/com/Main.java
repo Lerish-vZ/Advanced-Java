@@ -7,10 +7,14 @@ public class Main {
 
   public static void main(String[] args) {
     // Setup Executor
-    
-    // Submit Runnable
-    
-    // Showndown ExectuorService
+    ExecutorService es = Executors.newCachedThreadPool();
 
+    // Submit Runnable
+    es.submit(new CountRunnable(20, "A"));
+    es.submit(new CountRunnable(20, "B"));
+    es.submit(new CountRunnable(20, "C"));
+
+    // Shutdown ExectuorService
+    es.shutdown();
   }
 }

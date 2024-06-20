@@ -6,10 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class NetworkClientMain {
 
@@ -42,6 +39,16 @@ public class NetworkClientMain {
             es.awaitTermination(5, TimeUnit.SECONDS);
         } catch (InterruptedException ex) {
             System.out.println("Stopped waiting early.");
+        }
+
+        for(RequestResponse lookup : callables.keySet()) {
+            Future<RequestResponse> future = callables.get(lookup);
+            try {
+                lookup = future.get;
+                System.out.println(lookup.host + ": " + lookup.port + " " + lookup.response);
+            } catch (ExecutionException | InterruptedException ex) {
+                System.out.println("Error talking to " + lookup.host + ": " + lookup.port);
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.example;
+package lesson_15_p1.com;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

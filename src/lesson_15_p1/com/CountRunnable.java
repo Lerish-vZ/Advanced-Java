@@ -1,4 +1,4 @@
-package com.example;
+package lesson_15_p1.com;
 
 public class CountRunnable implements Runnable{
   

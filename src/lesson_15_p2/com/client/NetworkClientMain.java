@@ -9,6 +9,7 @@ import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 public class NetworkClientMain {
 
@@ -34,6 +35,13 @@ public class NetworkClientMain {
             NetworkClientCallable callable = new NetworkClientCallable(lookup);
             Future<RequestResponse> future = es.submit(callable);
             callables.put(lookup, future);
+        }
+        es.shutdown();
+
+        try {
+            es.awaitTermination(5, TimeUnit.SECONDS);
+        } catch (InterruptedException ex) {
+            System.out.println("Stopped waiting early.");
         }
     }
 }

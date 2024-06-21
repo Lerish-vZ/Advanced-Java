@@ -23,6 +23,7 @@ public class CalcTest {
 
         Stream<SalesTxn> s2 = s1.filter(e -> e.getBuyerName().equalsIgnoreCase("Radio Hut"));
 
+        DoubleStream s3 = s2.mapToDouble()
 
         double t1 = 0; // Put result here
 

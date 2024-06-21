@@ -1,4 +1,7 @@
-package com.example.lambda;
+package lesson_17_p1.com.lambda;
+
+import com.example.lambda.State;
+import com.example.lambda.TaxRate;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -40,70 +43,70 @@ public class SalesTxn {
         private State state;
         private String code = "";
        
-        public SalesTxn.Builder txnId(long val){
+        public Builder txnId(long val){
             this.txnId = val;
             return this;
         }
         
         
-        public SalesTxn.Builder salesPerson( String val){
+        public Builder salesPerson( String val){
             this.salesPerson = val;
             return this;
         }
         
-        public SalesTxn.Builder buyerName(String val){
+        public Builder buyerName(String val){
             this.buyerName = val;
             return this;
         }
         
-        public SalesTxn.Builder buyerClass(BuyerClass val){
+        public Builder buyerClass(BuyerClass val){
             this.buyerClass = val;
             return this;
         }
         
-        public SalesTxn.Builder product(String val){
+        public Builder product(String val){
             this.product = val;
             return this;
         }
 
         
-        public SalesTxn.Builder paymentType( String val){
+        public Builder paymentType( String val){
             this.paymentType = val;
             return this;
         }
 
-        public SalesTxn.Builder unitPrice(double val){
+        public Builder unitPrice(double val){
             this.unitPrice = val;
             return this;
         }
 
-        public SalesTxn.Builder unitCount(double val){
+        public Builder unitCount(double val){
             this.unitCount = val;
             return this;
         }
         
 
-        public SalesTxn.Builder discountRate(double val){
+        public Builder discountRate(double val){
             this.discountRate = val;
             return this;
         }
 
-        public SalesTxn.Builder txnDate(LocalDate val){
+        public Builder txnDate(LocalDate val){
             this.txnDate = val;
             return this;
         }    
 
-        public SalesTxn.Builder city(String val){
+        public Builder city(String val){
           city = val;
           return this;
         }
 
-        public SalesTxn.Builder state(State val){
+        public Builder state(State val){
           state = val;
           return this;
         }
 
-        public SalesTxn.Builder code(String val){
+        public Builder code(String val){
           code = val;
           return this;
         }
@@ -117,7 +120,7 @@ public class SalesTxn {
         super();
     }
     
-  private SalesTxn(SalesTxn.Builder builder){
+  private SalesTxn(Builder builder){
     txnId = builder.txnId;
     salesPerson = builder.salesPerson;
     buyerName = builder.buyerName;
@@ -251,7 +254,7 @@ public class SalesTxn {
     List<SalesTxn> txnList = new ArrayList<>();
     
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(11)
             .salesPerson("Jane Doe")
             .buyerName("Acme Electronics")
@@ -270,7 +273,7 @@ public class SalesTxn {
     
     
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(12)
             .salesPerson("Jane Doe")
             .buyerName("Acme Electronics")
@@ -289,7 +292,7 @@ public class SalesTxn {
     
     
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(13)
             .salesPerson("Jane Doe")
             .buyerName("Radio Hut")
@@ -307,7 +310,7 @@ public class SalesTxn {
     );
     
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(14)
             .salesPerson("John Smith")
             .buyerName("Best Deals")
@@ -324,7 +327,7 @@ public class SalesTxn {
             .build() 
     );
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(15)
             .salesPerson("Betty Jones")
             .buyerName("Radio Hut")
@@ -342,7 +345,7 @@ public class SalesTxn {
     );
     
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(16)
             .salesPerson("Betty Jones")
             .buyerName("Best Deals")
@@ -360,7 +363,7 @@ public class SalesTxn {
     );
     
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(17)
             .salesPerson("Dave Smith")
             .buyerName("PriceCo")
@@ -379,7 +382,7 @@ public class SalesTxn {
     
     
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(18)
             .salesPerson("Dave Smith")
             .buyerName("PriceCo")
@@ -396,7 +399,7 @@ public class SalesTxn {
             .build() 
     );
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(19)
             .salesPerson("Betty Jones")
             .buyerName("Best Deals")
@@ -414,7 +417,7 @@ public class SalesTxn {
     );
     
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(20)
             .salesPerson("John Adams")
             .buyerName("PriceCo")
@@ -432,7 +435,7 @@ public class SalesTxn {
     );
     
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(21)
             .salesPerson("John Adams")
             .buyerName("PriceCo")
@@ -450,7 +453,7 @@ public class SalesTxn {
     );
     
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(22)
             .salesPerson("Samuel Adams")
             .buyerName("Mom and Pops")
@@ -468,7 +471,7 @@ public class SalesTxn {
     );
     
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(23)
             .salesPerson("Samuel Adams")
             .buyerName("Radio Hut")
@@ -486,7 +489,7 @@ public class SalesTxn {
     );
     
     txnList.add(
-      new SalesTxn.Builder()
+      new Builder()
             .txnId(24)
             .salesPerson("Samuel Adams")
             .buyerName("Mom and Pops")

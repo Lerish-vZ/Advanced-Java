@@ -1,4 +1,6 @@
-package com.example.lambda;
+package lesson_17_p3.com.lambda;
+
+import com.example.lambda.SalesTxn;
 
 import java.util.List;
 

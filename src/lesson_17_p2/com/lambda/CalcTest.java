@@ -31,7 +31,10 @@ public class CalcTest {
         
         System.out.printf("PriceCo Total: $%,9.2f%n", t2);
         
-        double t3 = tList.stream().sequential(); // Best Deals Code here
+        double t3 = tList.stream().sequential()
+                .filter(t -> t.getBuyerName().equals("Best Deals"))
+                .mapToDouble(t -> t.getTransactionTotal())
+                .sum();; // Best Deals Code here
         
         System.out.printf("Best Deals Total: $%,9.2f%n", t3);                 
         

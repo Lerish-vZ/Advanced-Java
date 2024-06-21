@@ -1,4 +1,4 @@
-package com.example;
+package lesson_16_p1.com;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ThreadLocalRandom;

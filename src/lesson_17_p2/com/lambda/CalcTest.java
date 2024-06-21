@@ -24,11 +24,14 @@ public class CalcTest {
         
         System.out.printf("Radio Hut Total: $%,9.2f%n", t1);
         
-        double t2 = 0; //PriceCo Code Here
+        double t2 = tList.stream().parallel()
+                .filter(t -> t.getBuyerName().equals("PriceCo"))
+                .mapToDouble(t -> t.getTransactionTotal())
+                .sum(); //PriceCo Code Here
         
         System.out.printf("PriceCo Total: $%,9.2f%n", t2);
         
-        double t3 = 0; // Best Deals Code here
+        double t3 = tList.stream().sequential(); // Best Deals Code here
         
         System.out.printf("Best Deals Total: $%,9.2f%n", t3);                 
         

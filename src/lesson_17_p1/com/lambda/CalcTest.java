@@ -1,6 +1,6 @@
 package lesson_17_p1.com.lambda;
 
-import com.example.lambda.SalesTxn;
+import lesson_17_p1.com.lambda.SalesTxn;
 
 import java.util.List;
 import java.util.stream.DoubleStream;

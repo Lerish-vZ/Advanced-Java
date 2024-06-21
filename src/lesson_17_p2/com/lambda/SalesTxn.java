@@ -1,7 +1,7 @@
 package lesson_17_p2.com.lambda;
 
-import com.example.lambda.State;
-import com.example.lambda.TaxRate;
+import lesson_17_p2.com.lambda.State;
+import lesson_17_p2.com.lambda.TaxRate;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

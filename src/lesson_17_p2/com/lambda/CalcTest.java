@@ -17,7 +17,10 @@ public class CalcTest {
         
         // Print out Transaction Totals
         System.out.println("=== Transactions Totals ===");
-        double t1 = 0; // Radio Hut code here
+        double t1 = tList.parallelStream()
+                .filter(t -> t.getBuyerName().equals("Radio Hut"))
+                .mapToDouble(t -> t.getTransactionTotal())
+                .sum(); // Radio Hut code here
         
         System.out.printf("Radio Hut Total: $%,9.2f%n", t1);
         

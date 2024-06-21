@@ -24,7 +24,7 @@ public class Main {
         
         ForkJoinPool pool = new ForkJoinPool();
         FindMaxTask task = new FindMaxTask(data, 0, data.length-1, data.length/16);
-        Integer result = pool.invoke(task);
+        Integer result = pool.invoke(task); //^^
         System.out.println("Max value found:" + result);
         
     }

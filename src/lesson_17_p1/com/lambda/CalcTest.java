@@ -21,11 +21,10 @@ public class CalcTest {
         // Put code here
         Stream<SalesTxn> s1 = tList.stream();
 
-        Stream<SalesTxn> s2 = s1.filter(e -> e.getBuyerName().equalsIgnoreCase("Radio Hut"));
+        Stream<SalesTxn> s2 = s1.filter(e -> e.getBuyerName().equals("Radio Hut"));
 
-        DoubleStream s3 = s2.mapToDouble()
-
-        double t1 = 0; // Put result here
+        DoubleStream s3 = s2.mapToDouble(e -> e.getTransactionTotal());
+        double t1 = s3.sum(); // Put result here
 
         System.out.printf("Radio Hut Total: $%,9.2f%n", t1);
 

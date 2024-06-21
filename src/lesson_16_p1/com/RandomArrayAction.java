@@ -21,6 +21,11 @@ public class RandomArrayAction extends RecursiveAction {
             for (int i = start; i < end; i++) {
                 myArray[i] = ThreadLocalRandom.current().nextInt(); //ThreadLocalRandom is used instead of Math.random() because Math.random() does not scale when executed concurrently by multiple threads and would eliminate the benefit of applying the Fork-Join framework.
             }
+        } else {
+            int midway = (end - start) / 2;
+            RandomArrayAction r1 = new RandomArrayAction(myArray, start, midway, threshold);
+            RandomArrayAction r2 = new RandomArrayAction(myArray, midway, end, threshold);
+            invokeAll(r1, r2);
         }
     }
 }

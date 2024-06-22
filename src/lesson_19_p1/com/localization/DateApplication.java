@@ -1,4 +1,4 @@
-package com.example.localization;
+package lesson_19_p1.com.localization;
 
 import java.io.BufferedReader;
 import java.io.IOException;

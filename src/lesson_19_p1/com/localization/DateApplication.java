@@ -64,8 +64,10 @@ public class DateApplication {
         // Long Date
         df = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).withLocale(currentLocale);
         pw.println(messages.getString("date2") + " " + today.format(df));
-        
+
         // Short Date
+        df = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).withLocale(currentLocale);
+        pw.println(messages.getString("date3") + " " + today.format(df));
 
         // Medium Date/Time
 

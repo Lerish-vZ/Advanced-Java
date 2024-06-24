@@ -89,6 +89,8 @@ public class DateApplication {
     
     public void setRussian(){
         // Set currentLocale
+        currentLocale = ruLocale;
         // Set messages
+        this.messages = ResourceBundle.getBundle("MessagesBundle", currentLocale);
     }
 }

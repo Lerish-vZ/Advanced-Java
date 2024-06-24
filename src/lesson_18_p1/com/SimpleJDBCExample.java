@@ -35,7 +35,7 @@ public class SimpleJDBCExample {
 
             }
 
-            query = "INSERT INTO public.\"Employee\" VALUES ('Murray', '1950-09-21', 150000)";
+            query = "INSERT INTO public.\"Employee\" VALUES (5, 'Murray', 'Helen', '1950-09-21', 150000)";
             if(stmt.executeUpdate(query) != 1){
                 System.out.println("Insert failed");
             }

@@ -1,23 +1,20 @@
 package lesson_18_p1.com;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Date;
+import java.sql.*;
 
 public class SimpleJDBCExample {
 
     public static void main(String[] args) {
         // Create the "url"
         // assume database server is running on the localhost
-        String url = "jdbc:derby://localhost:1527/EmployeeDB";
-        String username = "tiger";
-        String password = "scott";
+        String url = "jdbc:postgresql://localhost:5432/java_adv";
+        String username = "postgres";
+        String password = "123456";
 
         // Create a simple query
-        String query = "select * from EMPLOYEE";
+//        String query = "select * from EMPLOYEE";
+        String query = "SELECT * FROM public.\"Employee\"";
 
         // A try-with-resources example
         // Connection and Statement implement java.lan.AutoCloseable

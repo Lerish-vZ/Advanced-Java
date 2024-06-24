@@ -48,7 +48,9 @@ public class DateApplication {
       pw.println("=== Date App ===");
       
       // Full Date
-      
+      df = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).withLocale(currentLocale);
+      pw.println(messages.getString("date1") + " " + today.format(df));
+
       // Long Date
       
       // Short Date

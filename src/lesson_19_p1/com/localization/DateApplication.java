@@ -70,11 +70,13 @@ public class DateApplication {
         pw.println(messages.getString("date3") + " " + today.format(df));
 
         // Medium Date/Time
-        df = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM).withLocale(currentLocale);
+        df = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).withLocale(currentLocale);
         pw.println(messages.getString("date4") + " " + today.format(df));
 
         // Medium Time
-        
+        df = DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM).withLocale(currentLocale);
+        pw.println(messages.getString("date5") + " " + today.format(df));
+
         pw.println("\n--- Choose Language Option ---");
         pw.println("1. " + messages.getString("menu1"));
         pw.println("2. " + messages.getString("menu2"));

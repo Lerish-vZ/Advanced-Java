@@ -68,12 +68,16 @@ public class DateApplication {
     
     public void setEnglish(){
         // Set currentLocale
+        currentLocale = Locale.US;
         // Set messages
+        messages = ResourceBundle.getBundle("MessagesBundle", currentLocale);
     }
     
     public void setFrench(){
         // Set currentLocale
+        currentLocale = Locale.FRANCE;
         // Set messages
+        messages = ResourceBundle.getBundle("MessagesBundle", currentLocale);
     }
     
     public void setChinese(){

@@ -34,6 +34,12 @@ public class SimpleJDBCExample {
                         + "Salary:        " + salary + "\n");
 
             }
+
+            query = "INSERT INTO public.\"Employee\" VALUES ('Murray', '1950-09-21', 150000)";
+            if(stmt.executeUpdate(query) != 1){
+                System.out.println("Insert failed");
+            }
+
         } catch (SQLException e) {
             System.out.println("Exception creating connection: " + e);
             System.exit(0);
@@ -41,5 +47,6 @@ public class SimpleJDBCExample {
         // No need to close the Connection and Statement objects, the compiler
         // will generate these for us and call the close() statement on this
         // objects in the order we obtained them in the try
+
     }
 }
